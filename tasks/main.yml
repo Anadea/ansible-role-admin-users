@@ -6,6 +6,7 @@
 - name: create admin users
   user:
     name: '{{item.username}}'
+    shell: '{{admin_users_shell}}'
     comment: '{{item.fullname}}'
     groups: '{{admin_users_sudo_group}}'
     append: yes
